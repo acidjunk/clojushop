@@ -268,33 +268,33 @@
 
 ;test data ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;TODO avoid img path redundancy
+;TODO avoid img path redundancy and provide low and high res pictures
 (def dummy-products
   [
    {:na "Cookies" :des "Lorem ipsum dolor sit amet"
     :img {
-          :pl {:1 "http://ivanschuetz.com/img/cs/product_list/r1/cookies.jpg" :2 "http://ivanschuetz.com/img/cs/product_list/r2/cookies.jpg"}
-          :pd {:1 "http://ivanschuetz.com/img/cs/product_details/r1/cookies.jpg" :2 "http://ivanschuetz.com/img/cs/product_details/r2/cookies.jpg"}}    
+          :pl {:1 "https://www.dropbox.com/s/vfky4wbtnk0cf05/1.jpg?dl=0" :2 "https://www.dropbox.com/s/vfky4wbtnk0cf05/1.jpg?dl=0"}
+          :pd {:1 "https://www.dropbox.com/s/vfky4wbtnk0cf05/1.jpg?dl=0" :2 "https://www.dropbox.com/s/vfky4wbtnk0cf05/1.jpg?dl=0"}}
     :pr {:v "2" :c "1"} :se "ischuetz"}
    {:na "Blueberries" :des "Lorem ipsum dolor sit amet"
     :img {
-          :pl {:1 "http://ivanschuetz.com/img/cs/product_list/r1/blueberries.png" :2 "http://ivanschuetz.com/img/cs/product_list/r2/blueberries.png"}
-          :pd {:1 "http://ivanschuetz.com/img/cs/product_details/r1/blueberries.png" :2 "http://ivanschuetz.com/img/cs/product_details/r2/blueberries.png"}}
+          :pl {:1 "https://www.dropbox.com/s/njn4xc1666zlucs/2.jpg?dl=0" :2 "https://www.dropbox.com/s/njn4xc1666zlucs/2.jpg?dl=0"}
+          :pd {:1 "https://www.dropbox.com/s/njn4xc1666zlucs/2.jpg?dl=0" :2 "https://www.dropbox.com/s/njn4xc1666zlucs/2.jpg?dl=0"}}
     :pr {:v "3.45" :c "1"} :se "betty123"}
    {:na "Meat" :des "Lorem ipsum dolor sit amet"
     :img {
-          :pl {:1 "http://ivanschuetz.com/img/cs/product_list/r1/meat.jpg" :2 "http://ivanschuetz.com/img/cs/product_list/r2/meat.jpg"}
-          :pd {:1 "http://ivanschuetz.com/img/cs/product_details/r1/meat.jpg" :2 "http://ivanschuetz.com/img/cs/product_details/r2/meat.jpg"}}
+          :pl {:1 "https://www.dropbox.com/s/0h3zhto2sixyuu8/3.jpg?dl=0" :2 "https://www.dropbox.com/s/0h3zhto2sixyuu8/3.jpg?dl=0"}
+          :pd {:1 "https://www.dropbox.com/s/0h3zhto2sixyuu8/3.jpg?dl=0" :2 "https://www.dropbox.com/s/0h3zhto2sixyuu8/3.jpg?dl=0"}}
     :pr {:v "7" :c "1"} :se "a-fisher"}
    {:na "Juice" :des "Lorem ipsum dolor sit amet"
     :img {
-          :pl {:1 "http://ivanschuetz.com/img/cs/product_list/r1/juice.jpg" :2 "http://ivanschuetz.com/img/cs/product_list/r2/juice.jpg"}
-          :pd {:1 "http://ivanschuetz.com/img/cs/product_details/r1/juice.jpg" :2 "http://ivanschuetz.com/img/cs/product_details/r2/juice.jpg"}}
+          :pl {:1 "https://www.dropbox.com/s/8qtirt8bc4kn2eo/4.jpg?dl=0" :2 "https://www.dropbox.com/s/8qtirt8bc4kn2eo/4.jpg?dl=0"}
+          :pd {:1 "https://www.dropbox.com/s/8qtirt8bc4kn2eo/4.jpg?dl=0" :2 "https://www.dropbox.com/s/8qtirt8bc4kn2eo/4.jpg?dl=0"}}
     :pr {:v "4" :c "1"} :se "ischuetz"}
     {:na "Potatoes" :des "Lorem ipsum dolor sit amet"
     :img {
-          :pl {:1 "http://ivanschuetz.com/img/cs/product_list/r1/potatoes.jpg" :2 "http://ivanschuetz.com/img/cs/product_list/r2/potatoes.jpg"}
-          :pd {:1 "http://ivanschuetz.com/img/cs/product_details/r1/potatoes.jpg" :2 "http://ivanschuetz.com/img/cs/product_details/r2/potatoes.jpg"}}
+          :pl {:1 "https://www.dropbox.com/s/52r1xbd03tgtp5d/5.jpg?dl=0" :2 "https://www.dropbox.com/s/52r1xbd03tgtp5d/5.jpg?dl=0"}
+          :pd {:1 "https://www.dropbox.com/s/52r1xbd03tgtp5d/5.jpg?dl=0" :2 "https://www.dropbox.com/s/52r1xbd03tgtp5d/5.jpg?dl=0"}}
     :pr {:v "1" :c "1"} :se "momo"}
    ])
 
@@ -335,7 +335,7 @@
 ;TODO remove
 (defn register-user1 []
   (let [result (app (request :post paths/user-register {:una "user1" :uem "user2@foo.com" :upw "test123"}))]
-    (println "resgistered rersult: " result)))
+    (println "registered result " result)))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
